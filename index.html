@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1b2a41"><title>Mis cuentas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="login" hidden><form id="lf"><h1>Mis cuentas</h1>
+<input id="em" type="email" placeholder="Correo" required>
+<input id="pw" type="password" placeholder="Contraseña (mín. 6 caracteres)" required>
+<p id="err"></p><button id="si" class="main">Entrar</button><button id="up" class="ghost">Crear cuenta</button></form></div>
+
+<header><div class="top"><div class="mes"><button id="pv" aria-label="Mes anterior">‹</button><h2 id="ml"></h2><button id="nx" aria-label="Mes siguiente">›</button></div>
+<div><button id="cfg" aria-label="Saldos iniciales">⚙️</button><button id="exp" aria-label="Exportar copia">⬇️</button><button id="out" aria-label="Salir" hidden>⎋</button></div></div>
+<div class="bal"><div><small>Liquidez</small><b id="liq"></b></div><div class="hu"><small>Hucha</small><b id="huc"></b></div></div>
+<p id="tip"></p></header>
+<nav id="tabs"><button data-t="in">Ingresos</button><button data-t="out">Gastos</button><button data-t="mv">Ahorro</button><button data-t="fix">Fijos</button></nav>
+<main id="list"></main>
+<button id="fab" aria-label="Añadir">+</button>
+
+<div id="sheet" hidden><form id="f">
+<div class="seg" id="kd"><button type="button" data-k="out">Gasto</button><button type="button" data-k="in">Ingreso</button><button type="button" data-k="mv">Mover</button></div>
+<input id="amt" inputmode="decimal" placeholder="Importe en €" autocomplete="off" required>
+<div id="cats"></div>
+<select id="dir"><option value="save">Liquidez → Hucha</option><option value="take">Hucha → Liquidez</option></select>
+<input id="note" placeholder="Concepto (opcional)" autocomplete="off">
+<input id="dt" type="date">
+<label id="fxl"><input type="checkbox" id="fx"> Repetir cada mes (gasto fijo)</label>
+<button class="main">Guardar</button></form></div>
+<script type="module" src="app.js"></script></body></html>
